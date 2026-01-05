@@ -8,7 +8,7 @@
   <!-- Social Preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Help Me Bring My Family Back Together">
-  <meta property="og:description" content="A father’s story of separation, loss, and hope for reunification.">
+  <meta property="og:description" content="A personal story about family, separation, and starting again.">
   <meta property="og:image" content="https://i.ibb.co/hRrp78ZZ/pa.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -16,7 +16,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Help Me Bring My Family Back Together">
-  <meta name="twitter:description" content="A father’s story of separation, loss, and hope for reunification.">
+  <meta name="twitter:description" content="A personal story about family, separation, and starting again.">
   <meta name="twitter:image" content="https://i.ibb.co/hRrp78ZZ/pa.jpg">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45);
+      background: rgba(0,0,0,0.4);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,10 +48,10 @@
 
     .hero-title {
       color: #fff;
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 600;
-      padding: 16px 28px;
-      border-radius: 14px;
+      padding: 14px 26px;
+      border-radius: 12px;
       background: rgba(0,0,0,0.35);
       text-align: center;
     }
@@ -88,24 +88,40 @@
       opacity: 0.4;
     }
 
-    .interest-link {
+    /* 🔥 DONATION CALL */
+    .donate-call {
       text-align: center;
-      margin: 28px 0;
-      font-size: 16px;
+      font-size: 22px;
+      font-weight: 700;
+      color: red;
+      margin: 30px 0;
+      animation: pulse 1.2s infinite;
     }
 
-    .interest-link a {
-      color: #1c7ed6;
-      font-weight: 600;
+    .donate-call a {
+      color: red;
       text-decoration: none;
     }
 
-    .interest-link a:hover {
-      text-decoration: underline;
+    .arrow {
+      display: inline-block;
+      margin-left: 8px;
+      animation: arrowBlink 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes arrowBlink {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+      100% { transform: translateX(0); }
     }
 
     .video-wrapper {
-      position: relative;
       max-width: 700px;
       margin: 30px auto;
       border-radius: 14px;
@@ -146,17 +162,24 @@
 
   <div class="hero">
     <div class="hero-overlay">
-      <div class="hero-title">
-        Help Me Bring My Family Back Together
-      </div>
+      <div class="hero-title">Help Me Bring My Family Back Together</div>
     </div>
   </div>
 
   <div class="container">
 
+    <!-- DONATION CALL -->
+    <div class="donate-call">
+      <a href="https://gofund.me/3752273aa" target="_blank">
+        DONATE & SEE MORE DETAILS
+        <span class="arrow">➤➤➤</span>
+      </a>
+    </div>
+
+    <!-- ORIGINAL STORY (UNCHANGED) -->
     <p>
-      My name is Khaled. Before the war, I lived a normal life.
-      I worked, provided for my family, and believed stability would last.
+      My name is Khaled. Before the war, I lived a normal life. I worked, provided for my family,
+      and believed that stability was something permanent.
     </p>
 
     <p>
@@ -168,50 +191,43 @@
     <h2>About My Family</h2>
 
     <p>
-      I am a father of five children.
-      For their safety, I made the hardest decision of my life —
+      I am a father of five children. Their ages range from early childhood to early teenage years.
+    </p>
+
+    <p>
+      For their safety, I had to make the hardest decision of my life —
       sending my family away while I stayed behind.
     </p>
 
     <p>
-      Distance is not only physical. It is emotional, psychological, and deeply painful.
+      Distance is not just physical. It is emotional, psychological, and deeply painful.
     </p>
 
     <div class="divider"></div>
 
-    <!-- رابط التبرع -->
-    <div class="interest-link">
-      <strong>للتبرع والمزيد من التفاصيل اضغط هنا</strong><br>
-      <a href="https://gofund.me/3752273aa" target="_blank">
-        Donate & Learn More
-      </a>
+    <!-- VIDEO FIRST -->
+    <div class="video-wrapper">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="2.mp4" type="video/mp4">
+      </video>
     </div>
 
-    <!-- فيديو 1 -->
+    <!-- IMAGES -->
+    <div class="images-row">
+      <img src="3.jpg" alt="">
+      <img src="4.jpg" alt="">
+    </div>
+
+    <!-- VIDEO LAST -->
     <div class="video-wrapper">
       <video autoplay muted loop playsinline preload="auto">
         <source src="1.mp4" type="video/mp4">
       </video>
     </div>
 
-    <!-- الصور -->
-    <div class="images-row">
-      <img src="2.jpg" alt="">
-      <img src="3.jpg" alt="">
-    </div>
-
-    <!-- فيديو 4 -->
-    <div class="video-wrapper">
-      <video autoplay muted loop playsinline preload="auto">
-        <source src="4.mp4" type="video/mp4">
-      </video>
-    </div>
-
   </div>
 
-  <footer>
-    © 2026 — Personal Story
-  </footer>
+  <footer>© 2026 — Personal Story</footer>
 
 </body>
 </html>
